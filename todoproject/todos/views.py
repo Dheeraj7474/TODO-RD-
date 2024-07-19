@@ -3,6 +3,14 @@ from rest_framework.decorators import api_view
 from .models import TodoItem
 from .serializers import TodoItemSerializer
 
+from rest_framework.reverse import reverse
+
+@api_view(['GET'])
+def api_root(request, format=None):
+    return Response({
+        'todos': reverse('get_todos', request=request, format=format),
+    })
+    
 @api_view(['GET'])
 def get_todos(request):
     todos = TodoItem.objects.all()
