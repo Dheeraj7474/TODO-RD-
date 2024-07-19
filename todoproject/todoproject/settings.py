@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-4qik!2y3d=id_e+%5dl7itks^8ja2igj#^4#xv91ad-!102a%@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['3.145.128.16']
 
 
 # Application definition
@@ -73,7 +73,7 @@ TEMPLATES = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-]
+    "http://frontend-todo-rd.s3-website.us-east-2.amazonaws.com"]
 
 WSGI_APPLICATION = 'todoproject.wsgi.application'
 
